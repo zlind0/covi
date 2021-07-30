@@ -22,6 +22,11 @@ userFeedURLs.forEach(userUrl => {
 
                 content.insertAdjacentHTML('beforeend', newItem);
             });
+            $("a").each(function(){
+                if(this.href.includes("t.me")){
+                    this.href='javascript:void(0);';
+                }
+            })
         }
     });
 });
